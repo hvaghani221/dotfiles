@@ -1,5 +1,5 @@
 -- Opens explorer
-vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
+vim.keymap.set("n", "<M-e>", vim.cmd.Ex)
 
 -- [[ Basic Keymaps ]]
 
@@ -14,7 +14,7 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic message" })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
+vim.keymap.set('n', '<M-d>', vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
 
 
@@ -41,17 +41,18 @@ vim.keymap.set("v", "<leader>y", "\"+y")
 
 
 -- Split the window
-vim.keymap.set("n", "<leader>wn", "<C-w>v", { noremap = true})
-vim.keymap.set("n", "<leader><left>", "<C-w>h", { noremap = true})
-vim.keymap.set("n", "<leader><right>", "<C-w>l", { noremap = true})
+vim.keymap.set("n", "<C-n>", "<C-w>v", { noremap = true})
+vim.keymap.set("n", "<C-h>", "<C-w>h", { noremap = true})
+vim.keymap.set("n", "<C-l>", "<C-w>l", { noremap = true})
+vim.keymap.set("n", "<C-j>", "<C-w>j", { noremap = true})
+vim.keymap.set("n", "<C-k>", "<C-w>k", { noremap = true})
 
 -- navigation
 vim.keymap.set("n", "L", "<cmd>bnext<cr>")
 vim.keymap.set("n", "H", "<cmd>bprevious<cr>")
-vim.keymap.set("n", "F", "<cmd>HopPattern<cr>")
 
 -- Delete current buffer, make and paste
 vim.keymap.set("n", "<leader>cv", "ggVGd<Esc>:make<CR><CR><Esc>", { noremap = false})
 -- <CR><C-v>
 
-vim.keymap.set("n", "<M-d>", vim.diagnostic.open_float)
+vim.keymap.set('n', '<M-q>', ':bd<CR>', { desc = "Close current buffer" })

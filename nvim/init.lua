@@ -3,7 +3,6 @@ require 'bindings'
 
 require 'plugins.lazy'
 
-
 require 'plugins.theme'
 require 'plugins.telescope'
 require 'plugins.treesitter'
