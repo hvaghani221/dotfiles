@@ -143,6 +143,7 @@ require('lazy').setup({
   {'xiyaowong/transparent.nvim'},
 
   {'EtiamNullam/deferred-clipboard.nvim'},
+  -- {'fatih/vim-go'},
 }, {})
 
 
